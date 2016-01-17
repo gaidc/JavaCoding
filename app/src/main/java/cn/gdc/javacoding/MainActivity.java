@@ -19,10 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        MyTextUtil util = new MyTextUtil();
-
-        TextView tv = (TextView) findViewById(R.id.myTextView);
-        tv.setText(util.getValue());
+        getWelcomeString();
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -37,6 +34,13 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    private void getWelcomeString() {
+        MyTextUtil myUtil = new MyTextUtil();
+
+        TextView tv = (TextView) findViewById(R.id.myTextView);
+        tv.setText(myUtil.getValue());
     }
 
     @Override
