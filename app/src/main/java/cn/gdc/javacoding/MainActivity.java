@@ -21,10 +21,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         getWelcomeString();
 
+        MyTextUtil util = new MyTextUtil();
+
         for (int count = 0; count < 10; count++) {
             Log.i("MainActivity", "count = " + count);
 
         }
+
+        MyTextUtil util2 = util;
+
+        Log.d("MainActivity", "A message");
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
